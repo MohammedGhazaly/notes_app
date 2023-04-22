@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomButtonWidget extends StatelessWidget {
-  const CustomButtonWidget({super.key});
-
+  CustomButtonWidget({super.key, required this.onTap});
+  void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       customBorder:
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: 50,
