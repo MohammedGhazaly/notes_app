@@ -27,7 +27,13 @@ class AddNoteBottomSheet extends StatelessWidget {
           return AbsorbPointer(
               absorbing: state is AddNoteLoading ? true : false,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                // ViewInsets => SoftKeyboard data
+                padding: EdgeInsets.only(
+                    left: 16,
+                    right: 16,
+                    // كده هو بيطلع مسافة اد ارتفاع الكيبورد
+                    // يعني الفكرة انك تعطي مسافة اد ارتفاع الكيبورد
+                    bottom: MediaQuery.of(context).viewInsets.bottom),
                 child: const SingleChildScrollView(child: AddNoteForm()),
               ));
         },
