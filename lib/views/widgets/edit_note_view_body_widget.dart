@@ -29,6 +29,7 @@ class EditNoteViewBody extends StatelessWidget {
               CustomTextFieldWidget(
                 hintText: "Title",
                 validatorFunction: (value) {},
+                onSaved: (value) {},
               ),
               SizedBox(
                 height: 16,
@@ -37,6 +38,7 @@ class EditNoteViewBody extends StatelessWidget {
                 hintText: "Content",
                 maxLines: 5,
                 validatorFunction: (value) {},
+                onSaved: (value) {},
               )
             ],
           ),

@@ -6,16 +6,17 @@ class CustomTextFieldWidget extends StatelessWidget {
       {super.key,
       required this.hintText,
       this.maxLines = 1,
-      required this.validatorFunction});
+      required this.validatorFunction,
+      required this.onSaved});
   final String hintText;
   final int maxLines;
   final String? Function(String?) validatorFunction;
-
+  final void Function(String?)? onSaved;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       validator: validatorFunction,
-
+      onSaved: onSaved,
       // (value) {
       //   // بقول لو القيمة بنول اعمل شيك اذا كان فاضي ولا لا
       //   // طب لو بن
