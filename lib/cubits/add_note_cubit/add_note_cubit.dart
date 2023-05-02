@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bloc/bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:meta/meta.dart';
@@ -13,7 +15,6 @@ class AddNoteCubit extends Cubit<AddNoteState> {
     // isLoading = true;
     emit(AddNoteLoading());
     try {
-      print("Inside try");
       var notesBox = Hive.box<NoteModel>(kNotesBox);
       await notesBox.add(note);
       // isLoading = false;
