@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/views/widgets/colors_item_widget.dart';
 
 class ColorsListView extends StatelessWidget {
-  const ColorsListView({super.key});
-
+  const ColorsListView({super.key, required this.isActive});
+  final bool isActive;
   @override
   Widget build(BuildContext context) {
     return Container(
