@@ -1,5 +1,4 @@
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/edit_note_view_body_widget.dart';
 
