@@ -78,7 +78,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
                         title: title!,
                         subTitle: subTitle!,
                         date: formattedCurrentData,
-                        color: Colors.blue.value));
+                        color: BlocProvider.of<AddNoteCubit>(context)
+                            .color
+                            .value));
                   } else {}
                 },
               );
